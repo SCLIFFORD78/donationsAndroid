@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/sclifford/OneDrive - Gallarus Industry Solutions/College/mobileAppDevelopment/donationsAndroid/app/src/main/res/drawable/side_nav_bar.xml" value="0.38385416666666666" />
         <entry key="..\:/Users/sclifford/OneDrive - Gallarus Industry Solutions/College/mobileAppDevelopment/donationsAndroid/app/src/main/res/layout/fragment_donation.xml" value="0.27219202898550726" />
         <entry key="..\:/Users/sclifford/OneDrive - Gallarus Industry Solutions/College/mobileAppDevelopment/donationsAndroid/app/src/main/res/layout/fragment_report.xml" value="0.27219202898550726" />
         <entry key="..\:/Users/sclifford/OneDrive - Gallarus Industry Solutions/College/mobileAppDevelopment/donationsAndroid/app/src/main/res/layout/home.xml" value="0.27219202898550726" />
+        <entry key="..\:/Users/sclifford/OneDrive - Gallarus Industry Solutions/College/mobileAppDevelopment/donationsAndroid/app/src/main/res/layout/nav_header.xml" value="0.27219202898550726" />
+        <entry key="..\:/Users/sclifford/OneDrive - Gallarus Industry Solutions/College/mobileAppDevelopment/donationsAndroid/app/src/main/res/menu/nav_drawer_menu.xml" value="0.3651041666666667" />
       </map>
     </option>
   </component>
