@@ -7,7 +7,7 @@ import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import ie.wit.donationx.R
-import ie.wit.donationx.databinding.FragmentDonationBinding
+import ie.wit.donationx.databinding.FragmentDonateBinding
 import ie.wit.donationx.main.DonationXApp
 import ie.wit.donationx.models.DonationModel
 
@@ -15,23 +15,23 @@ class DonateFragment : Fragment() {
 
     lateinit var app: DonationXApp
     var totalDonated = 0
-    private var _fragBinding: FragmentDonationBinding? = null
+    private var _fragBinding: FragmentDonateBinding? = null
     private val fragBinding get() = _fragBinding!!
     //lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         app = activity?.application as DonationXApp
+        setHasOptionsMenu(true)
         //navController = Navigation.findNavController(activity!!, R.id.nav_host_fragment)
     }
 
     override fun onCreateView(
-
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        _fragBinding = FragmentDonationBinding.inflate(inflater, container, false)
+        _fragBinding = FragmentDonateBinding.inflate(inflater, container, false)
         val root = fragBinding.root
         activity?.title = getString(R.string.action_donate)
 
@@ -44,7 +44,6 @@ class DonateFragment : Fragment() {
             fragBinding.paymentAmount.setText("$newVal")
         }
         setButtonListener(fragBinding)
-        setHasOptionsMenu(true)
         return root;
     }
 
@@ -56,7 +55,7 @@ class DonateFragment : Fragment() {
             }
     }
 
-    fun setButtonListener(layout: FragmentDonationBinding) {
+    fun setButtonListener(layout: FragmentDonateBinding) {
         layout.donateButton.setOnClickListener {
             val amount = if (layout.paymentAmount.text.isNotEmpty())
                 layout.paymentAmount.text.toString().toInt() else layout.amountPicker.value
@@ -97,6 +96,4 @@ class DonateFragment : Fragment() {
         fragBinding.progressBar.progress = totalDonated
         fragBinding.totalSoFar.text = "$$totalDonated"
     }
-
-
 }
