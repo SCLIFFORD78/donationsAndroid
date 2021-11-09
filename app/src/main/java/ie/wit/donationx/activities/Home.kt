@@ -25,13 +25,15 @@ class Home : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         val navController = findNavController(R.id.nav_host_fragment)
-        NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
+
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
+        appBarConfiguration = AppBarConfiguration(setOf(
+            R.id.donateFragment, R.id.reportFragment, R.id.aboutusFragment), drawerLayout)
+        setupActionBarWithNavController(navController, appBarConfiguration)
+
         val navView = homeBinding.navView
         navView.setupWithNavController(navController)
-
-        appBarConfiguration = AppBarConfiguration(setOf(
-            R.id.donateFragment, R.id.reportFragment, R.id.aboutUsFragment), drawerLayout)
-        setupActionBarWithNavController(navController, appBarConfiguration)
     }
 
     override fun onSupportNavigateUp(): Boolean {
