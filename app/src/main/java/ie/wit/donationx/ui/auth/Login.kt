@@ -24,11 +24,11 @@ class Login : AppCompatActivity() {
 
         loginBinding.emailSignInButton.setOnClickListener {
             signIn(loginBinding.fieldEmail.text.toString(),
-                loginBinding.fieldPassword.text.toString())
+                    loginBinding.fieldPassword.text.toString())
         }
         loginBinding.emailCreateAccountButton.setOnClickListener {
             createAccount(loginBinding.fieldEmail.text.toString(),
-                loginBinding.fieldPassword.text.toString())
+                    loginBinding.fieldPassword.text.toString())
         }
     }
 
@@ -41,7 +41,7 @@ class Login : AppCompatActivity() {
             startActivity(Intent(this, Home::class.java)) })
 
         loginRegisterViewModel.firebaseAuthManager.errorStatus.observe(this, Observer
-        { status -> checkStatus(status) })
+            { status -> checkStatus(status) })
     }
 
     //Required to exit app from Login Screen - must investigate this further
@@ -66,10 +66,10 @@ class Login : AppCompatActivity() {
     }
 
     private fun checkStatus(error:Boolean) {
-        if (error)
-            Toast.makeText(this,
-                getString(R.string.auth_failed),
-                Toast.LENGTH_LONG).show()
+            if (error)
+                Toast.makeText(this,
+                        getString(R.string.auth_failed),
+                        Toast.LENGTH_LONG).show()
     }
 
     private fun validateForm(): Boolean {

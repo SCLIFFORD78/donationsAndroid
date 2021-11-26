@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/sclifford/My Documents/donationsAndroid/app/src/main/res/layout/fragment_donation_detail.xml" value="0.19202898550724637" />
         <entry key="..\:/Users/sclifford/My Documents/donationsAndroid/app/src/main/res/layout/nav_header.xml" value="0.18085106382978725" />
+        <entry key="..\:/Users/sclifford/My Documents/donationsAndroid/app/src/main/res/menu/nav_drawer_menu.xml" value="0.36615384615384616" />
         <entry key="app/src/main/res/layout/card_donation.xml" value="0.11617426139208813" />
         <entry key="app/src/main/res/layout/fragment_donation_detail.xml" value="0.11617426139208813" />
       </map>
