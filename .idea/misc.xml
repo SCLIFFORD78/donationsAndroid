@@ -3,8 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/sclifford/My Documents/donationsAndroid/app/src/main/res/layout/app_bar_home.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/sclifford/My Documents/donationsAndroid/app/src/main/res/layout/content_home.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/sclifford/My Documents/donationsAndroid/app/src/main/res/layout/fragment_donation_detail.xml" value="0.19202898550724637" />
+        <entry key="..\:/Users/sclifford/My Documents/donationsAndroid/app/src/main/res/layout/fragment_report.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/sclifford/My Documents/donationsAndroid/app/src/main/res/layout/home.xml" value="0.271286231884058" />
+        <entry key="..\:/Users/sclifford/My Documents/donationsAndroid/app/src/main/res/layout/loading.xml" value="0.19701086956521738" />
+        <entry key="..\:/Users/sclifford/My Documents/donationsAndroid/app/src/main/res/layout/login.xml" value="0.271286231884058" />
         <entry key="..\:/Users/sclifford/My Documents/donationsAndroid/app/src/main/res/layout/nav_header.xml" value="0.18085106382978725" />
+        <entry key="..\:/Users/sclifford/My Documents/donationsAndroid/app/src/main/res/menu/menu_donate.xml" value="0.371875" />
+        <entry key="..\:/Users/sclifford/My Documents/donationsAndroid/app/src/main/res/menu/menu_report.xml" value="0.371875" />
         <entry key="..\:/Users/sclifford/My Documents/donationsAndroid/app/src/main/res/menu/nav_drawer_menu.xml" value="0.36615384615384616" />
         <entry key="app/src/main/res/layout/card_donation.xml" value="0.11617426139208813" />
         <entry key="app/src/main/res/layout/fragment_donation_detail.xml" value="0.11617426139208813" />
