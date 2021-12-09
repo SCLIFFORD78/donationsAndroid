@@ -40,7 +40,14 @@ object FirebaseDBManager : DonationStore {
 
 
     override fun findById(userid: String, donationid: String, donation: MutableLiveData<DonationModel>) {
-        TODO("Not yet implemented")
+
+        database.child("user-donations").child(userid)
+            .child(donationid).get().addOnSuccessListener {
+                donation.value = it.getValue(DonationModel::class.java)
+                Timber.i("firebase Got value ${it.value}")
+            }.addOnFailureListener{
+                Timber.e("firebase Error getting data $it")
+            }
     }
 
     override fun create(firebaseUser: MutableLiveData<FirebaseUser>, donation: DonationModel) {
@@ -72,6 +79,13 @@ object FirebaseDBManager : DonationStore {
     }
 
     override fun update(userid: String, donationid: String, donation: DonationModel) {
-        TODO("Not yet implemented")
+
+        val donationValues = donation.toMap()
+
+        val childUpdate : MutableMap<String, Any?> = HashMap()
+        childUpdate["donations/$donationid"] = donationValues
+        childUpdate["user-donations/$userid/$donationid"] = donationValues
+
+        database.updateChildren(childUpdate)
     }
 }
