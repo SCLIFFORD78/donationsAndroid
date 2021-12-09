@@ -45,7 +45,7 @@ class DonationDetailFragment : Fragment() {
 
         fragBinding.deleteDonationButton.setOnClickListener {
             reportViewModel.delete(loggedInViewModel.liveFirebaseUser.value?.email!!,
-                detailViewModel.observableDonation.value?._id!!)
+                detailViewModel.observableDonation.value?.uid!!)
             findNavController().navigateUp()
         }
         return root

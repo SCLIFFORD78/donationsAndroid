@@ -1,6 +1,7 @@
 package ie.wit.donationx.models
 
 import androidx.lifecycle.MutableLiveData
+import com.google.firebase.auth.FirebaseUser
 import ie.wit.donationx.api.DonationClient
 import ie.wit.donationx.api.DonationWrapper
 import retrofit2.Call
@@ -62,28 +63,11 @@ object DonationManager : DonationStore {
         })
     }
 
-    override fun create( donation: DonationModel) {
-
-        val call = DonationClient.getApi().post(donation.email,donation)
-        Timber.i("Retrofit ${call.toString()}")
-
-        call.enqueue(object : Callback<DonationWrapper> {
-            override fun onResponse(call: Call<DonationWrapper>,
-                                    response: Response<DonationWrapper>
-            ) {
-                val donationWrapper = response.body()
-                if (donationWrapper != null) {
-                    Timber.i("Retrofit ${donationWrapper.message}")
-                    Timber.i("Retrofit ${donationWrapper.data.toString()}")
-                }
-            }
-
-            override fun onFailure(call: Call<DonationWrapper>, t: Throwable) {
-                Timber.i("Retrofit Error : $t.message")
-                Timber.i("Retrofit create Error : $t.message")
-            }
-        })
+    override fun create(firebaseUser: MutableLiveData<FirebaseUser>, donation: DonationModel) {
+        TODO("Not yet implemented")
     }
+
+
 
     override fun delete(email: String,id: String) {
 
