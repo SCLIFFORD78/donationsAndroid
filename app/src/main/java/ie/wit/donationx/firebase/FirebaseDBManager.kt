@@ -2,8 +2,7 @@ package ie.wit.donationx.firebase
 
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
 import ie.wit.donationx.models.DonationModel
 import ie.wit.donationx.models.DonationStore
 import timber.log.Timber
@@ -15,9 +14,30 @@ object FirebaseDBManager : DonationStore {
         TODO("Not yet implemented")
     }
 
+
     override fun findAll(userid: String, donationsList: MutableLiveData<List<DonationModel>>) {
-        TODO("Not yet implemented")
+
+        database.child("user-donations").child(userid)
+            .addValueEventListener(object : ValueEventListener {
+                override fun onCancelled(error: DatabaseError) {
+                    Timber.i("Firebase Donation error : ${error.message}")
+                }
+
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    val localList = ArrayList<DonationModel>()
+                    val children = snapshot.children
+                    children.forEach {
+                        val donation = it.getValue(DonationModel::class.java)
+                        localList.add(donation!!)
+                    }
+                    database.child("user-donations").child(userid)
+                        .removeEventListener(this)
+
+                    donationsList.value = localList
+                }
+            })
     }
+
 
     override fun findById(userid: String, donationid: String, donation: MutableLiveData<DonationModel>) {
         TODO("Not yet implemented")

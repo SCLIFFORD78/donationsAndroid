@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.FirebaseUser
+import ie.wit.donationx.firebase.FirebaseDBManager
 import ie.wit.donationx.models.DonationManager
 import ie.wit.donationx.models.DonationModel
 import timber.log.Timber
@@ -23,7 +24,7 @@ class ReportViewModel : ViewModel() {
 
     fun load() {
         try {
-            DonationManager.findAll(liveFirebaseUser.value?.email!!, donationsList)
+            FirebaseDBManager.findAll(liveFirebaseUser.value?.uid.toString(), donationsList)
             Timber.i("Report Load Success : ${donationsList.value.toString()}")
         }
         catch (e: Exception) {
