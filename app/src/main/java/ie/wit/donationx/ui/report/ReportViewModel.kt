@@ -32,9 +32,10 @@ class ReportViewModel : ViewModel() {
         }
     }
 
-    fun delete(email: String, id: String) {
+    fun delete(userid: String, id: String) {
         try {
-            DonationManager.delete(email,id)
+            //DonationManager.delete(userid,id)
+            FirebaseDBManager.delete(userid,id)
             Timber.i("Report Delete Success")
         }
         catch (e: Exception) {

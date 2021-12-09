@@ -66,9 +66,8 @@ class ReportFragment : Fragment(), DonationClickListener {
                 showLoader(loader,"Deleting Donation")
                 val adapter = fragBinding.recyclerView.adapter as DonationAdapter
                 adapter.removeAt(viewHolder.adapterPosition)
-                reportViewModel.delete(reportViewModel.liveFirebaseUser.value?.email!!,
-                    (viewHolder.itemView.tag as DonationModel).uid.toString()
-                )
+                reportViewModel.delete(reportViewModel.liveFirebaseUser.value?.uid!!,
+                    (viewHolder.itemView.tag as DonationModel).uid!!)
                 hideLoader(loader)
             }
         }
