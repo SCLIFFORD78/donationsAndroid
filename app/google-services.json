@@ -8,12 +8,20 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:517559783085:android:f21b804e0228b7a07e4024",
+        "mobilesdk_app_id": "1:517559783085:android:6d685eb7e6801a997e4024",
         "android_client_info": {
           "package_name": "ie.wit.donationx"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "517559783085-io6jff99nea062qlu0008q1ngtcg5vpc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ie.wit.donationx",
+            "certificate_hash": "c96d2346bf64b6d53a9934360bc979c4163e5d75"
+          }
+        },
         {
           "client_id": "517559783085-rk9fp9mfsni4ap108k11v76e33u75u56.apps.googleusercontent.com",
           "client_type": 3
@@ -28,7 +36,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "517559783085-rk9fp9mfsni4ap108k11v76e33u75u56.apps.googleusercontent.com",
+              "client_id": "517559783085-1lin19copjth8k3kg1b1n860hfarb785.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
