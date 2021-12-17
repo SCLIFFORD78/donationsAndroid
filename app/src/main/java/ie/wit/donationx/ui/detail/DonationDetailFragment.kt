@@ -25,7 +25,7 @@ class DonationDetailFragment : Fragment() {
     private val reportViewModel : ReportViewModel by activityViewModels()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?
+                            savedInstanceState: Bundle?
     ): View? {
         _fragBinding = FragmentDonationDetailBinding.inflate(inflater, container, false)
         val root = fragBinding.root
@@ -35,17 +35,17 @@ class DonationDetailFragment : Fragment() {
 
         fragBinding.editDonationButton.setOnClickListener {
             detailViewModel.updateDonation(loggedInViewModel.liveFirebaseUser.value?.uid!!,
-                args.donationid, fragBinding.donationvm?.observableDonation!!.value!!)
+            args.donationid, fragBinding.donationvm?.observableDonation!!.value!!)
             //Force Reload of list to guarantee refresh
             reportViewModel.load()
             findNavController().navigateUp()
             //findNavController().popBackStack()
 
-        }
+                }
 
         fragBinding.deleteDonationButton.setOnClickListener {
             reportViewModel.delete(loggedInViewModel.liveFirebaseUser.value?.uid!!,
-                detailViewModel.observableDonation.value?.uid!!)
+                            detailViewModel.observableDonation.value?.uid!!)
             findNavController().navigateUp()
         }
         return root
@@ -59,7 +59,7 @@ class DonationDetailFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         detailViewModel.getDonation(loggedInViewModel.liveFirebaseUser.value?.uid!!,
-            args.donationid)
+                        args.donationid)
     }
 
     override fun onDestroyView() {

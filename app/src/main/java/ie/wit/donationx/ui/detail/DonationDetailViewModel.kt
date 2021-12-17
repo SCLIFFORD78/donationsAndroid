@@ -12,8 +12,8 @@ class DonationDetailViewModel : ViewModel() {
     private val donation = MutableLiveData<DonationModel>()
 
     var observableDonation: LiveData<DonationModel>
-        get() = donation
-        set(value) {donation.value = value.value}
+         get() = donation
+         set(value) {donation.value = value.value}
 
     fun getDonation(userid:String, id: String) {
         try {

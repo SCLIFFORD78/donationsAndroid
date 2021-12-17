@@ -12,6 +12,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import ie.wit.donationx.R
 import ie.wit.donationx.databinding.FragmentDonateBinding
+import ie.wit.donationx.firebase.FirebaseImageManager
 import ie.wit.donationx.models.DonationModel
 import ie.wit.donationx.ui.auth.LoggedInViewModel
 import ie.wit.donationx.ui.report.ReportViewModel
@@ -79,8 +80,8 @@ class DonateFragment : Fragment() {
                 layout.totalSoFar.text = String.format(getString(R.string.totalSoFar),totalDonated)
                 layout.progressBar.progress = totalDonated
                 donateViewModel.addDonation(loggedInViewModel.liveFirebaseUser,
-                    DonationModel(paymentmethod = paymentmethod,amount = amount,
-                        email = loggedInViewModel.liveFirebaseUser.value?.email!!))
+                                DonationModel(paymentmethod = paymentmethod,amount = amount,
+                                    email = loggedInViewModel.liveFirebaseUser.value?.email!!))
             }
         }
     }

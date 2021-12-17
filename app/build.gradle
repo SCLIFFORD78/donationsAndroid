@@ -13,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId "ie.wit.donationx"
-        minSdk 29
+        minSdk 30
         targetSdk 31
         versionCode 1
         versionName "1.0"
@@ -46,7 +46,7 @@ android {
 
 dependencies {
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.31"
+    //implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.31"
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'
@@ -66,16 +66,11 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.google.firebase:firebase-auth-ktx:21.0.1'
-
-    implementation platform('com.google.firebase:firebase-bom:29.0.0')
-    implementation 'com.google.firebase:firebase-auth-ktx'
-    implementation 'com.google.firebase:firebase-auth-ktx:21.0.1'
-
-    implementation 'androidx.fragment:fragment-ktx:1.4.0'
-    implementation 'com.google.firebase:firebase-database:20.0.3'
-
-    implementation 'com.google.android.gms:play-services-auth:19.2.0'
-    implementation 'com.google.firebase:firebase-auth:21.0.1'
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.3'
+    implementation 'com.google.android.gms:play-services-auth:20.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.google.firebase:firebase-storage-ktx:20.0.0'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

@@ -1,8 +1,6 @@
 package ie.wit.donationx.main
 
 import android.app.Application
-import ie.wit.donationx.models.DonationManager
-import ie.wit.donationx.models.DonationStore
 import timber.log.Timber
 
 class DonationXApp : Application() {
